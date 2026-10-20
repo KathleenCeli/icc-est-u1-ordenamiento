@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        int [] original = { 5, 3, 4, 1, 2 };
+        int [] original = { 5, 3, 4, 1, 2, 6};
         int [] b = original.clone();
         int [] c = original;
 
@@ -12,7 +12,13 @@ public class App {
         printArreglo(b);
         buuble.sort(b);
         printArreglo(b);
-        
+
+        // INSTANCIAR Seleccion
+        System.out.println("Selection sort");
+        Selection selection = new Selection();
+        printArreglo(c);
+        selection.sort(c);
+        printArreglo(c);
     }
     public static void printArreglo(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
