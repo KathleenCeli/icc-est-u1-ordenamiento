@@ -5,12 +5,15 @@ import java.util.List;
 import models.Estudiante;
 
 public class App {
+
     public static void main(String[] args) throws Exception {
-        runEjemplosPrimitivos();
-        runEjemplosObjetos();
-        runComparators();
-        runComparatorsObj();
-        runComparatorsObj2();
+        //runEjemplosPrimitivos();
+       // runEjemplosObjetos();
+        //runComparators();
+        //runComparatorsObj();
+        //runComparatorsObj2();
+
+        Comparators comparators = new Comparators();
     } 
 
     private static void runComparatorsObj() {
@@ -32,7 +35,6 @@ public class App {
             new Estudiante("Diego", 3.5),
             new Estudiante("Pedro", 6.8),
         };
-        
         Comparator<Estudiante> compNota = Comparator.comparingDouble(e -> e.getNota());
         Arrays.sort(estudiantes, compNota);
         System.out.println("Ordenado por nota de menor a mayor");
